@@ -1,0 +1,13 @@
+* {
+    /* background-color: #141414;
+    color: whitesmoke; */
+    font-family: 'Bungee', cursive;
+}
+
+h1 {
+    font-family: 'Bungee', cursive;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 60px;
+}
