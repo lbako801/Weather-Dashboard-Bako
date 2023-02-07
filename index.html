@@ -7,26 +7,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bungee&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@1,700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="./assets/images/icons8-rainfall-48.png">
     <link rel="stylesheet" href="./assets/style.css">
-    <script defer src="./assets/index.js"></script>
-    <title>5-Day Forecast Widget</title>
+    <title>Lo's Weather Widget</title>
 </head>
 <body>
 
-    <h1>Loren's Weather Widget</h1>
+    <h1>- Lo's Weather Widget -</h1>
     
-    <div>
-        <h2>Enter a City!</h2>
-        <form>
-            <input type='text' placeholder="Tokyo, Chicago, Denver, etc.">
-            <button type="submit"></button>
+    <div id="input-form-container">
+        <form id="city-input"> 
+            <p>Right now in</p> <input type="text" class="city-name" id="city-input-value" > <p>it is... </p>
         </form>
-    </div>
+    </div> 
 
-    <div>
-        <h2>5 Day Forecast</h2>
+<div id="weather-box">
+    <div id="current-weather-container">
+        <p>Temperature:</p>
+        <p>Humidity:</p>
+        <p>Wind Speed:</p>
+        <p>UV Index:</p>
     </div>
+</div>
+
+<div id="forecast-container">
+    <h2>- 5 Day Forecast -</h2>
+</div>
+    <script
+    src="https://code.jquery.com/jquery-3.6.1.min.js"
+    integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
+    crossorigin="anonymous"></script>
+    <script src="./assets/index.js"></script>
 
 </body>
+
 </html>

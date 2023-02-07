@@ -1,13 +1,67 @@
 * {
-    /* background-color: #141414;
-    color: whitesmoke; */
-    font-family: 'Bungee', cursive;
+    background-color:#F5EFED;
+    color: #0069D2;
+    font-family: 'Roboto Mono', monospace;
+    
 }
 
 h1 {
-    font-family: 'Bungee', cursive;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 60px;
+    font-size: 30px;
+}
+
+#input-form-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px
+}
+
+#city-input {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+input {
+    border: none;
+    border-bottom: solid 2px black;
+    font-family: 'Roboto Mono', monospace;
+    font-weight: bold;
+    font-size: 30px;
+    text-align: center;
+    width: auto;
+    text-transform: uppercase;
+}
+
+input:focus, textarea:focus, select:focus{
+    outline: none;
+    font-family: 'Roboto Mono', monospace;
+    font-weight: bold;
+    width:auto;
+    /* text-transform: uppercase; */
+}
+#weather-box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#current-weather-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: #0069D2 solid;
+    width: 300px;
+    height: 200px;
+    border-radius: 30px;
+}
+
+#forecast-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
