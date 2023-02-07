@@ -11,7 +11,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@1,700&display=swap" rel="stylesheet">
-    <link rel="icon" type="image/x-icon" href="./assets/images/icons8-rainfall-48.png">
+    <link rel="icon" type="image/x-icon" href="./assets/images/amcharts_weather_icons_1.0.0/animated/cloudy-day-1.svg">
     <link rel="stylesheet" href="./assets/style.css">
     <title>Lo's Weather Widget</title>
 </head>
@@ -21,22 +21,31 @@
     
     <div id="input-form-container">
         <form id="city-input"> 
-            <p>Right now in</p> <input type="text" class="city-name" id="city-input-value" > <p>it is... </p>
+            <p>Right now in</p> 
+            <input type="text" id="city-input-value">
+            <p>it is... </p>
         </form>
     </div> 
 
 <div id="weather-box">
     <div id="current-weather-container">
-        <p>Temperature:</p>
-        <p>Humidity:</p>
-        <p>Wind Speed:</p>
-        <p>UV Index:</p>
+        <p id="temp">Temperature:</p>
+        <p id="humidity">Humidity:</p>
+        <p id="wind">Wind Speed:</p>
+        <p id="uv-index">UV Index:</p>
     </div>
 </div>
 
+<h2>And for the next 5 days...</h2>
+
 <div id="forecast-container">
-    <h2>- 5 Day Forecast -</h2>
+    <div class="card"></div>
+    <div class="card"></div>
+    <div class="card"></div>
+    <div class="card"></div>
+    <div class="card"></div>
 </div>
+
     <script
     src="https://code.jquery.com/jquery-3.6.1.min.js"
     integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
