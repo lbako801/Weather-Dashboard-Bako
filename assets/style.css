@@ -53,7 +53,7 @@ h2 {
 
 input {
     border: none;
-    border-bottom: solid 2px black;
+    border-bottom: solid 2px rgba(0, 0, 0, 0.205);
     font-size: 30px;
     text-align: center;
     text-transform: uppercase;
@@ -95,10 +95,33 @@ input:focus, textarea:focus, select:focus{
 .card {
 
     width: 15%;
-    height: 300px;
+    height: 425px;
     border: #0069D2 solid;
     border-radius: 50px;
     background: #f5efed;
     box-shadow:  21px 21px 41px #bfbab9,
                 -21px -21px 41px #ffffff;
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.card>img{
+height: auto;
+width: 60%;
+}
+
+#history-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
 }
