@@ -9,6 +9,9 @@ cityForm.on("submit", function (e) {
   // prevent the default form submission behavior
   e.preventDefault();
 
+  //display any hidden elements
+  $(".hide").removeClass("hide");
+
   // get the value of the city input
   const city = cityInput.val();
 
@@ -37,6 +40,7 @@ cityForm.on("submit", function (e) {
   // display the search history in the history container
   historyContainer.html(`
     <ul>
+    <h2>SEARCH HISTORY</h2>
       ${searchHistory.map((city) => `<li>${city.toUpperCase()}</li>`).join("")}
     </ul>
   `);
@@ -88,4 +92,55 @@ cityForm.on("submit", function (e) {
         .catch((error) => console.error(error));
     })
     .catch((error) => console.error(error));
+  // GET 5-DAY FORECAST DATA
+// Map API image conditions to use my own SVGs
+const weatherConditionToSvgMap = {
+  Clear: "./assets/images/day.svg",
+  Rain: "./assets/images/rainy.svg",
+  Clouds: "./assets/images/cloudy-day.svg",
+  Snow: "./assets/images/snowy.svg",
+  Thunderstorm: ".assets//images/thunder.svg",
+};
+
+const forecastUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}`;
+fetch(forecastUrl)
+  .then((response) => {
+    if (response.ok) {
+      return response.json();
+    } else {
+      throw new Error("Unable to get forecast information");
+    }
+  })
+  .then((forecastData) => {
+    console.log("Forecast data:", forecastData);
+    // display the forecast data on your webpage
+    const forecastContainer = $("#forecast-container");
+    forecastContainer.html("");
+    const forecastList = forecastData.list;
+    for (let i = 0; i < forecastList.length; i += 8) {
+      const forecast = forecastList[i];
+      const date = new Date(forecast.dt * 1000);
+      const dateString = `${
+        date.getMonth() + 1
+      }/${date.getDate()}/${date.getFullYear()}`;
+      const weatherCondition = forecast.weather[0].main;
+      const svgSrc = weatherConditionToSvgMap[weatherCondition];
+      const temperatureInFahrenheit =
+        ((forecast.main.temp - 273.15) * 9) / 5 + 32;
+      const windSpeed = forecast.wind.speed;
+      const humidity = forecast.main.humidity;
+      forecastContainer.append(`
+        <div class="card">
+          <p>${dateString}</p>
+          <img src="${svgSrc}" />
+          <p>Temperature: ${temperatureInFahrenheit.toFixed(1)} &deg;F</p>
+          <p>Wind Speed: ${windSpeed} mph</p>
+          <p>Humidity: ${humidity}%</p>
+        </div>
+      `);
+    }
+    // show the forecast container on your webpage
+    forecastContainer.removeClass("hide");
+  })
+  .catch((error) => console.error(error));
 });
