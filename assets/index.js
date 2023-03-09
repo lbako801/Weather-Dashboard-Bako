@@ -39,11 +39,24 @@ cityForm.on("submit", function (e) {
 
   // display the search history in the history container
   historyContainer.html(`
+  <h2>SEARCH HISTORY</h2>
     <ul>
-    <h2>SEARCH HISTORY</h2>
+ 
       ${searchHistory.map((city) => `<li>${city.toUpperCase()}</li>`).join("")}
     </ul>
   `);
+  // select the search history list
+
+
+// add a click event listener to the search history items
+historyContainer.on("click", "li", function () {
+  const city = $(this).text().toLowerCase();
+
+  // update the city input value and submit the form to fetch the weather data
+  cityInput.val(city);
+  cityForm.submit();
+});
+
 
   const apiKey = "429fe2eb476f82ad84de7d98ea2ce8df";
 
