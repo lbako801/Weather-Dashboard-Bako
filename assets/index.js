@@ -57,10 +57,10 @@ historyContainer.on("click", "li", function () {
   cityForm.submit();
 });
 
-  const apiKey = "4591d315d89f7567d276b1ea1be48829";
+  const superSecretString = "4591d315d89f7567d276b1ea1be48829";
 
   // GET LAT AND LON OF CITY
-  const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}`;
+  const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${superSecretString}`;
   fetch(url)
     .then((response) => {
       if (response.ok) {
@@ -74,7 +74,7 @@ historyContainer.on("click", "li", function () {
       const lon = data.coord.lon;
 console.log(data);
       // GET CURRENT WEATHER DATA USING LAT AND LON
-      const weatherUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}`;
+      const weatherUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${superSecretString}`;
       fetch(weatherUrl)
         .then((response) => {
           if (response.ok) {
@@ -114,7 +114,7 @@ const weatherConditionToSvgMap = {
   Thunderstorm: ".assets//images/thunder.svg",
 };
 
-const forecastUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}`;
+const forecastUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${superSecretString}`;
 fetch(forecastUrl)
   .then((response) => {
     if (response.ok) {
