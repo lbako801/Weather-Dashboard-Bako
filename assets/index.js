@@ -57,8 +57,7 @@ historyContainer.on("click", "li", function () {
   cityForm.submit();
 });
 
-
-  const apiKey = "429fe2eb476f82ad84de7d98ea2ce8df";
+  const apiKey = "070c0875f7058ccc51b3035cc54b1570";
 
   // GET LAT AND LON OF CITY
   const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}`;
@@ -73,7 +72,7 @@ historyContainer.on("click", "li", function () {
     .then((data) => {
       const lat = data.coord.lat;
       const lon = data.coord.lon;
-
+console.log(data);
       // GET CURRENT WEATHER DATA USING LAT AND LON
       const weatherUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}`;
       fetch(weatherUrl)

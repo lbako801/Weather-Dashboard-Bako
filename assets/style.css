@@ -95,13 +95,6 @@ select:focus {
   padding: 5px;
 }
 
-/* #current-weather-container:hover {
-  width: 350px;
-  height:325px;
-  font-size:larger;
-  transform: scale(1.1);
-} */
-
 .hide {
   display: none !important;
 }
@@ -142,7 +135,6 @@ select:focus {
   width: 60%;
 }
 
-
 #history-container {
   display: flex;
   align-items: center;
@@ -157,12 +149,10 @@ select:focus {
 }
 
 .history-list{
-  list-style:none;
-  text-decoration: none;
-  text-align: center;
   font-size: 20px;
   transition: all 200ms ease-in-out;
 }
+
 .history:hover {
   cursor: pointer;
   text-decoration: underline;
@@ -170,11 +160,9 @@ select:focus {
   transition: all 200ms ease-in-out;
 }
 
-
 a {
   display: flex;
   align-items: center;
   justify-content: center;
   text-decoration: none;
 }
-
