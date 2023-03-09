@@ -40,9 +40,9 @@ cityForm.on("submit", function (e) {
   // display the search history in the history container
   historyContainer.html(`
   <h2>SEARCH HISTORY</h2>
-    <ul>
+    <ul class="history-list">
  
-      ${searchHistory.map((city) => `<li>${city.toUpperCase()}</li>`).join("")}
+      ${searchHistory.map((city) => `<li class="history">${city.toUpperCase()}</li>`).join("")}
     </ul>
   `);
   // select the search history list

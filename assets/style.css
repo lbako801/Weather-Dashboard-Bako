@@ -149,11 +149,27 @@ select:focus {
   justify-content: center;
   flex-direction: column;
   margin: 30px;
+  
 }
 
 #history-container > h3 {
   font-size: 30px;
 }
+
+.history-list{
+  list-style:none;
+  text-decoration: none;
+  text-align: center;
+  font-size: 20px;
+  transition: all 200ms ease-in-out;
+}
+.history:hover {
+  cursor: pointer;
+  text-decoration: underline;
+  font-size: 25px;
+  transition: all 200ms ease-in-out;
+}
+
 
 a {
   display: flex;
