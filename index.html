@@ -1,109 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@1,700&display=swap"
-      rel="stylesheet"
-    />
 
-    <link
-      href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@1,700&display=swap"
-      rel="stylesheet"
-    />
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@1,700&display=swap" rel="stylesheet" />
 
-    <link
-      rel="icon"
-      type="image/x-icon"
-      href="./assets/images/amcharts_weather_icons_1.0.0/animated/cloudy-day-1.svg"
-    />
-    <link rel="stylesheet" href="./assets/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@1,700&display=swap" rel="stylesheet" />
 
-    <title>Lo's Weather Widget</title>
-  </head>
-  <body>
-    <h1>- Weather Hub -</h1>
+  <link rel="icon" type="image/x-icon" href="./assets/images/amcharts_weather_icons_1.0.0/animated/cloudy-day-1.svg" />
+  <link rel="stylesheet" href="./assets/style.css" />
 
-    <div id="input-form-container">
-      <form id="city-input">
-        <input
-          type="text"
-          id="city-input-value"
-          placeholder="City search..."
-        />
-        <button type="submit" id="btn"></button>
-      </form>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+
+
+  <title>Lo's Weather Widget</title>
+</head>
+
+<body>
+  <h1>- Weather Hub -</h1>
+
+  <div id="input-form-container">
+    <form id="city-input">
+      <input type="text" id="city-input-value" placeholder="City search..." />
+      <button type="submit" id="btn"></button>
+    </form>
+  </div>
+  <div id="weather-box">
+
+    <div id="current-weather-container" class="hide">
+
+
     </div>
-    <div id="weather-box">
 
-      <div id="current-weather-container" class="hide">
+  </div>
 
 
+  <div class="hide">
+    <h2>- 5 Day Forecast -</h2>
+    <div id="forecast-container" class="hide">
+      <div class="card">
+        <p>DATE</p>
+        <img src="./assets/images/animated/cloudy-day-1.svg" />
+        <p>Temperature:</p>
+        <p>Wind Speed:</p>
+        <p>Humidity:</p>
       </div>
-
-    </div>
-  
-
-    <div class="hide">
-      <h2>- 5 Day Forecast -</h2>
-      <div id="forecast-container" class="hide">
-        <div class="card">
-          <p>DATE</p>
-          <img src="./assets/images/animated/cloudy-day-1.svg" />
-          <p>Temperature:</p>
-          <p>Wind Speed:</p>
-          <p>Humidity:</p>
-        </div>
-        <div class="card">
-          <p>DATE</p>
-          <img src="./assets/images/animated/rainy-2.svg" />
-          <p>Temperature:</p>
-          <p>Wind Speed:</p>
-          <p>Humidity:</p>
-        </div>
-        <div class="card">
-          <p>DATE</p>
-          <img src="./assets/images/animated/cloudy-night-1.svg" />
-          <p>Temperature:</p>
-          <p>Wind Speed:</p>
-          <p>Humidity:</p>
-        </div>
-        <div class="card">
-          <p>DATE</p>
-          <img src="./assets/images/animated/cloudy-day-1.svg" />
-          <p>Temperature:</p>
-          <p>Wind Speed:</p>
-          <p>Humidity:</p>
-        </div>
-        <div class="card">
-          <p>DATE</p>
-          <img src="./assets/images/animated/cloudy-day-1.svg" />
-          <p>Temperature:</p>
-          <p>Wind Speed:</p>
-          <p>Humidity:</p>
-        </div>
+      <div class="card">
+        <p>DATE</p>
+        <img src="./assets/images/animated/rainy-2.svg" />
+        <p>Temperature:</p>
+        <p>Wind Speed:</p>
+        <p>Humidity:</p>
+      </div>
+      <div class="card">
+        <p>DATE</p>
+        <img src="./assets/images/animated/cloudy-night-1.svg" />
+        <p>Temperature:</p>
+        <p>Wind Speed:</p>
+        <p>Humidity:</p>
+      </div>
+      <div class="card">
+        <p>DATE</p>
+        <img src="./assets/images/animated/cloudy-day-1.svg" />
+        <p>Temperature:</p>
+        <p>Wind Speed:</p>
+        <p>Humidity:</p>
+      </div>
+      <div class="card">
+        <p>DATE</p>
+        <img src="./assets/images/animated/cloudy-day-1.svg" />
+        <p>Temperature:</p>
+        <p>Wind Speed:</p>
+        <p>Humidity:</p>
       </div>
     </div>
-  
-    <div id="history-container">
-    </div>
+  </div>
 
-    <a href="https://github.com/lbako801" target="_blank">&copy; LOREN BAKO</a>
+  <div id="history-container">
+  </div>
 
-    <script src="./assets/index.js"></script>
+  <a href="https://github.com/lbako801" target="_blank">&copy; LOREN BAKO</a>
 
-    <script
-      src="https://code.jquery.com/jquery-3.6.1.min.js"
-      integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
-      crossorigin="anonymous"
-    ></script>
-  </body>
+  <script src="./assets/index.js"></script>
+
+</body>
+
 </html>
