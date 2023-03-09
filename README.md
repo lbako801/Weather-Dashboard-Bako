@@ -4,7 +4,7 @@ Welcome to Lo's Weather Widget! This is a weather dashboard website that provide
 ## How to Use
  - Go to Lo's Weather Widget website [here](https://lbako801.github.io/Weather-Dashboard-Bako/)
  - Enter the name of a major city in the search bar and press "Search".
- - The website will display the current weather data for the city including temperature, humidity, wind speed and UV index.
+ - The website will display the current weather data for the city including temperature, humidity, and wind speed.
  - The website also displays a 5-day forecast for the city, which includes the expected temperature, humidity, and weather condition for each day.
 ## Design
 The design of this website is unique and modern, incorporating neumorphic CSS styling to create an elegant and minimalist look. The use of soft shadows and gentle curves provide a tactile and pleasing experience for the user.
@@ -13,6 +13,9 @@ The design of this website is unique and modern, incorporating neumorphic CSS st
 [Lo's Weather Widget](https://lbako801.github.io/Weather-Dashboard-Bako/)
 ## Authors and Github
 This weather dashboard website was created by [Loren](https://github.com/lbako801)
+
+## Screenshot
+![Screenshot 2023-03-08 191838](https://user-images.githubusercontent.com/112914389/223898782-c7c6d1f6-74e4-41f9-8054-5f6b0ee91070.png)
 
 ## License
 This project is licensed under the MIT License - see the LICENSE file for details.
