@@ -30,7 +30,7 @@ h1 {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 50px;
+  font-size: 2rem;
   font-family: "Space Mono", monospace;
 }
 
@@ -102,13 +102,18 @@ select:focus {
   font-size:larger;
   transform: scale(1.1);
 }
+.hide {
+  display: none;
+}
+
 #forecast-container {
   display: flex;
   justify-content: space-around;
   align-items: center;
   font-weight: bold;
   flex-wrap: wrap;
-  height: 530px;
+  height: 150%;
+  /* display: none; */
 }
 
 .card {
@@ -123,14 +128,13 @@ select:focus {
   align-items: center;
   justify-content: center;
   padding: 5px;
-  transition: all .3s ease-in-out; 
+  transition: all 400ms ease; 
+  border: solid 2px transparent;
 }
 
 .card:hover{
-  width: 400px;
-  height:500px;
-  font-size: 20px;
-  transform: scale(1.1);
+  border: 2px #0069d2 solid;
+  transition: all 400ms ease;
 }
 
 .card > img {
@@ -157,3 +161,4 @@ a {
   justify-content: center;
   text-decoration: none;
 }
+
