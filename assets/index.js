@@ -57,7 +57,7 @@ historyContainer.on("click", "li", function () {
   cityForm.submit();
 });
 
-  const apiKey = "070c0875f7058ccc51b3035cc54b1570";
+  const apiKey = "4591d315d89f7567d276b1ea1be48829";
 
   // GET LAT AND LON OF CITY
   const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}`;
