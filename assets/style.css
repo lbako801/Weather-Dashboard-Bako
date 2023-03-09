@@ -96,15 +96,15 @@ select:focus {
   padding: 5px;
 }
 
-#current-weather-container:hover {
+/* #current-weather-container:hover {
   width: 350px;
   height:325px;
   font-size:larger;
   transform: scale(1.1);
-}
-.hide {
+} */
+/* .hide {
   display: none;
-}
+} */
 
 #forecast-container {
   display: flex;
@@ -117,8 +117,8 @@ select:focus {
 }
 
 .card {
-  width: 300px;
-  height: 375px;
+  width: 20%;
+  height: 500px;
   border-radius: 50px;
   background: #f5efed;
   box-shadow: 21px 21px 41px #bfbab9, -21px -21px 41px #ffffff;
